@@ -1,30 +1,28 @@
-# Your Project Title Here
+##Morse Code Converter
 
-One-sentence summary of your project goes here; then fill out each of the following sections.
+This website helps you to convert your text into morse code.
 
 ## Summary
 
-A paragraph or two describing what you built for your final project.
+Creating a website that allows people to input the words and translate it into morse code. 
 
-Include a discussion how it will be interactive or responsive to the environment.
+While you are typing the word, the website will play the morse code sound.
 
 ## Component Parts
 
-From what pieces did you build your project?
-
-Include what types of inputs/outputs/data it will use, and a diagram showing how all those pieces are connected.
+I ended up using HTML, CSS and jQuery to build the website.
 
 ## Challenges
 
-A brief discussion of what was hard, challenging, or unexpected about your project.
+I found a similar jQuery that did what I want it to do. Figuring it out how to use the jQuery is one of the challenge.
 
 ## Timeline
 
 What did you do in each of the past four weeks?
 
 - Week 1: Write proposal
-- Week 2: 
-- Week 3: 
+- Week 2: Figuring out the code, how to input words on screen, etc.
+- Week 3: Coding and Design
 - Week 4: Present!
 
 ## Completed Work
@@ -32,5 +30,3 @@ What did you do in each of the past four weeks?
 Photos and videos of your completed final project!
 
 ## References and links
-
-Tutorials, comments, videos, magazine articles - anything you found that helps you understand your project.
