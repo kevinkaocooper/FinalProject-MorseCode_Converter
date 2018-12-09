@@ -24,9 +24,3 @@ What did you do in each of the past four weeks?
 - Week 2: Figuring out the code, how to input words on screen, etc.
 - Week 3: Coding and Design
 - Week 4: Present!
-
-## Completed Work
-
-Photos and videos of your completed final project!
-
-## References and links
