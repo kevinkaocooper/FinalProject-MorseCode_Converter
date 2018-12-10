@@ -1,0 +1,96 @@
+@font-face {
+   font-family: LundaModernBold;
+   src: url(LundaModernBold.otf);
+}
+
+* {
+   font-family: LundaModernBold;
+   color: white;
+}
+
+body{
+  background-color: #0F345A;
+  overflow-x:hidden;
+}
+
+form{
+  margin-right:-10px;
+}
+
+.left-col{
+  width: 44%;
+  height: 90vh;
+  float:left;
+  padding: 3%;
+}
+
+.right-col {
+  width: 44%;
+  float:left;
+  padding: 3%;
+  height: auto;
+  margin-top: -10px;
+  background-color: #2C7C9E; 
+  height:91vh;
+}
+
+.control-label {
+  font-size: 36pt;
+}
+
+.form-control{
+  position: relative;
+  font-size: 70pt;
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+textarea{
+  outline-width: 0;
+  border: none;
+  background: transparent;
+  height:;
+}
+
+input.form-control:focus {
+  outline-width: 0;
+  border: none;
+  background: transparent;
+}
+
+.col-xs-11{
+    width: 40vw;
+    height: 74vh;
+    overflow: scroll;
+}
+
+#text{
+  font-size: 40pt;
+}
+
+pre {
+  width: 100%;
+  float: left;
+  font-size: 70pt;
+  min-height: 87vh;
+  margin: 0px;
+  overflow:auto;
+  height: 87vh;
+}
+
+small {
+  color: #AEAEAE;
+  font-size: 13px;
+  font-family: 'LundaModernBold';
+}
+
+.note {
+  background-color: #991913;
+  position: fixed;
+  right: 2%;
+  top: 88%;
+  font-size: 24px;
+  padding: 1%;
+
+}

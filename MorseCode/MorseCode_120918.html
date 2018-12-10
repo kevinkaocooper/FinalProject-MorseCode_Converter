@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Morse Code Converter</title>
+
+    <link rel="stylesheet" href="morsecode.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row page-header">
+        <!-- <div class="col-xs-12">
+          <h1>Morse Code Converter</h1>
+
+        </div> -->
+      </div>
+
+      <form class="form-horizontal">
+        <div class="form-group left-col">
+          <label for="morse" class="control-label col-xs-1">English</label>
+
+          <div class="col-xs-11">
+            <!-- <input type="text" class="form-control" id="morse" autocomplete="off"> -->
+            <textarea type="text" class="form-control" id="morse" autocomplete="off" cols="40" rows="6"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group right-col">
+          <label class="control-label col-xs-1">Morse</label>
+
+          <div class="col-xs-11">
+            <div id="text"></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="note">Live-convert text to morse code</div>
+    </div>
+
+    <audio id="a">
+     <source src="morsecode_sound/a.mp3" type="audio/wav">
+    </audio>
+    <audio id="b">
+     <source src="morsecode_sound/b.mp3" type="audio/wav">
+    </audio>
+    <audio id="c">
+     <source src="morsecode_sound/c.mp3" type="audio/wav">
+    </audio>
+    <audio id="d">
+     <source src="morsecode_sound/d.mp3" type="audio/wav">
+    </audio>
+    <audio id="e">
+     <source src="morsecode_sound/e.mp3" type="audio/wav">
+    </audio>
+    <audio id="f">
+     <source src="morsecode_sound/f.mp3" type="audio/wav">
+    </audio>
+    <audio id="g">
+     <source src="morsecode_sound/g.mp3" type="audio/wav">
+    </audio>
+    <audio id="h">
+     <source src="morsecode_sound/h.mp3" type="audio/wav">
+    </audio>
+    <audio id="i">
+     <source src="morsecode_sound/i.mp3" type="audio/wav">
+    </audio>
+    <audio id="j">
+     <source src="morsecode_sound/j.mp3" type="audio/wav">
+    </audio>
+    <audio id="k">
+     <source src="morsecode_sound/k.mp3" type="audio/wav">
+    </audio>
+    <audio id="l">
+     <source src="morsecode_sound/l.mp3" type="audio/wav">
+    </audio>
+    <audio id="m">
+     <source src="morsecode_sound/m.mp3" type="audio/wav">
+    </audio>
+    <audio id="n">
+     <source src="morsecode_sound/n.mp3" type="audio/wav">
+    </audio>
+    <audio id="o">
+     <source src="morsecode_sound/o.mp3" type="audio/wav">
+    </audio>
+    <audio id="p">
+     <source src="morsecode_sound/p.mp3" type="audio/wav">
+    </audio>
+    <audio id="q">
+     <source src="morsecode_sound/q.mp3" type="audio/wav">
+    </audio>
+    <audio id="r">
+     <source src="morsecode_sound/r.mp3" type="audio/wav">
+    </audio>
+    <audio id="s">
+     <source src="morsecode_sound/s.mp3" type="audio/wav">
+    </audio>
+    <audio id="t">
+     <source src="morsecode_sound/t.mp3" type="audio/wav">
+    </audio>
+    <audio id="u">
+     <source src="morsecode_sound/u.mp3" type="audio/wav">
+    </audio>
+    <audio id="v">
+     <source src="morsecode_sound/v.mp3" type="audio/wav">
+    </audio>
+    <audio id="w">
+     <source src="morsecode_sound/w.mp3" type="audio/wav">
+    </audio>
+    <audio id="x">
+     <source src="morsecode_sound/x.mp3" type="audio/wav">
+    </audio>
+    <audio id="y">
+     <source src="morsecode_sound/y.mp3" type="audio/wav">
+    </audio>
+    <audio id="z">
+     <source src="morsecode_sound/z.mp3" type="audio/wav">
+    </audio>
+
+  <script type="text/javascript">
+
+      $( document ).ready(function() {
+        $("#morse").focus();
+        $('body').keydown(function(e){
+
+          if(e.keyCode == 65){
+            $("#a")[0].currentTime=0;
+            $("#a")[0].play();
+          }
+
+          if(e.keyCode == 66){
+            $("#b")[0].currentTime=0;
+            $("#b")[0].play();
+          }
+
+          if(e.keyCode == 67){
+            $("#c")[0].currentTime=0;
+            $("#c")[0].play();
+          }
+
+          if(e.keyCode == 68){
+            $("#d")[0].currentTime=0;
+            $("#d")[0].play();
+          }
+
+          if(e.keyCode == 69){
+            $("#e")[0].currentTime=0;
+            $("#e")[0].play();
+          }
+
+          if(e.keyCode == 70){
+            $("#f")[0].currentTime=0;
+            $("#f")[0].play();
+          }
+
+          if(e.keyCode == 71){
+            $("#g")[0].currentTime=0;
+            $("#g")[0].play();
+          }
+
+          if(e.keyCode == 72){
+            $("#h")[0].currentTime=0;
+            $("#h")[0].play();
+          }
+
+          if(e.keyCode == 73){
+            $("#i")[0].currentTime=0;
+            $("#i")[0].play();
+          }
+
+          if(e.keyCode == 74){
+            $("#j")[0].currentTime=0;
+            $("#j")[0].play();
+          }
+
+          if(e.keyCode == 75){
+            $("#k")[0].currentTime=0;
+            $("#k")[0].play();
+          }
+
+          if(e.keyCode == 76){
+            $("#l")[0].currentTime=0;
+            $("#l")[0].play();
+          }
+
+          if(e.keyCode == 77){
+            $("#m")[0].currentTime=0;
+            $("#m")[0].play();
+          }
+
+          if(e.keyCode == 78){
+            $("#n")[0].currentTime=0;
+            $("#n")[0].play();
+          }
+
+          if(e.keyCode == 79){
+            $("#o")[0].currentTime=0;
+            $("#o")[0].play();
+          }
+
+          if(e.keyCode == 80){
+            $("#p")[0].currentTime=0;
+            $("#p")[0].play();
+          }
+
+          if(e.keyCode == 81){
+            $("#q")[0].currentTime=0;
+            $("#q")[0].play();
+          }
+
+          if(e.keyCode == 82){
+            $("#r")[0].currentTime=0;
+            $("#r")[0].play();
+          }
+
+          if(e.keyCode == 83){
+            $("#s")[0].currentTime=0;
+            $("#s")[0].play();
+          }
+
+          if(e.keyCode == 84){
+            $("#t")[0].currentTime=0;
+            $("#t")[0].play();
+          }
+
+          if(e.keyCode == 85){
+            $("#u")[0].currentTime=0;
+            $("#u")[0].play();
+          }
+
+          if(e.keyCode == 86){
+            $("#v")[0].currentTime=0;
+            $("#v")[0].play();
+          }
+
+          if(e.keyCode == 87){
+            $("#w")[0].currentTime=0;
+            $("#w")[0].play();
+          }
+
+          if(e.keyCode == 88){
+            $("#x")[0].currentTime=0;
+            $("#x")[0].play();
+          }
+
+          if(e.keyCode == 89){
+            $("#y")[0].currentTime=0;
+            $("#y")[0].play();
+          }
+
+          if(e.keyCode == 90){
+            $("#z")[0].currentTime=0;
+            $("#z")[0].play();
+          }
+
+        });
+      })
+
+    $('#morse').on('keyup', function () {
+      var value  = $(this).val();
+      var output = '';
+
+      if (value === '') {
+        $('#text').text('');
+
+        return false;
+      } // if (value === '')
+
+      for (var i = 0; i < value.length; i++) {
+        output += converter[value.charAt(i).toLowerCase()];
+      } // for (var i = 0; i < value.length; i++)
+
+      $('#text').text(output);
+
+      });
+
+      var converter = {
+      'a': '•—',
+      'b': '—•••',
+      'c': '•—•',
+      'd': '—••',
+      'e': '•',
+      'f': '••—•',
+      'g': '——•',
+      'h': '••••',
+      'i': '••',
+      'j': '•———',
+      'k': '—•—',
+      'l': '•—••',
+      'm': '——',
+      'n': '—•',
+      'o': '———',
+      'p': '•——•',
+      'q': '——•—',
+      'r': '•—•',
+      's': '•••',
+      't': '—',
+      'u': '••—',
+      'v': '•••—',
+      'w': '•——',
+      'x': '—••—',
+      'y': '—•——',
+      'z': '——••',
+      '1': '•————',
+      '2': '••———',
+      '3': '•••——',
+      '4': '••••—',
+      '5': '•••••',
+      '6': '—••••',
+      '7': '——•••',
+      '8': '———••',
+      '9': '————•',
+      '0': '—————',
+      '.': '•—•—•—',
+      ',': '——••——',
+      '?': '••——••',
+      "'": '•————•',
+      '!': '—•—•——',
+      '/': '—••—•',
+      '(': '—•——•',
+      ')': '—•——•—',
+      '&': '•—•••',
+      ':': '———•••',
+      ';': '—•—•—•',
+      '=': '—•••—',
+      '+': '•—•—•',
+      '': '—••••—',
+      '_': '••——•—',
+      '"': '•—••—•',
+      '$': '•••—••—',
+      '@': '•——•—•',
+      ' ': ' '
+      }
+    </script>
+  </body>
+</html>
